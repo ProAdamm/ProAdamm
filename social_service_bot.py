@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, CallbackContext
 
 # Botunuzun API anahtarını buraya ekleyin
 API_KEY = '7634758807:AAEPjGIVNjRt06SOZIl2tkWoRbKkuvVL5SA'
@@ -17,11 +17,12 @@ def start(update: Update, context: CallbackContext) -> None:
 
 def yardım(update: Update, context: CallbackContext) -> None:
     update.message.reply_text(
-        'Botu kullanarak sosyal medya etkileşimlerinizi artırabilirsiniz.\n'
+        'Botu kullanarak sosyal medya etkileşimlerinizi artırabilirsiniz.\n\n'
         'Aşağıdaki komutları kullanabilirsiniz:\n'
         '/beğeni - Beğeni eklemek için\n'
         '/takipçi - Takipçi eklemek için\n'
-        '/abone - Abone eklemek için'
+        '/abone - Abone eklemek için\n\n'
+        'Komutları kullanarak hizmetlerinizi başlatabilir ve işleminizi gerçekleştirebilirsiniz.'
     )
 
 # Basit bir işlem örneği
